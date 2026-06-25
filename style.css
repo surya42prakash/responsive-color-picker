@@ -1,0 +1,181 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  min-height: 100vh;
+  background-color: #1e1e2f;
+  color: white;
+  font-family: "Poppins", sans-serif;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+
+  padding: 1rem;
+
+  transition: background-color 0.6s ease;
+}
+
+h2 {
+  text-transform: uppercase;
+  text-align: center;
+  font-size: clamp(1rem, 2vw, 1.5rem);
+  font-weight: 600;
+  letter-spacing: 1px;
+
+  margin-bottom: 2rem;
+}
+
+.nav {
+  background-color: #2d2d44;
+  border-radius: 15px;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+
+  gap: 1rem;
+  padding: 1.5rem;
+
+  width: min(95vw, 850px);
+}
+
+.btn {
+  border: none;
+  cursor: pointer;
+
+  min-width: 110px;
+  padding: 0.8rem 1.5rem;
+
+  border-radius: 50px;
+
+  font-family: "Poppins", sans-serif;
+  font-size: 0.9rem;
+  font-weight: 600;
+  text-transform: uppercase;
+
+  transition: 0.3s ease;
+}
+
+.btn:hover {
+  transform: scale(1.05);
+}
+
+.btn-purple {
+  background-color: #6a4c93;
+  color: white;
+}
+
+.btn-pink {
+  background-color: #cb2062;
+  color: #3a003a;
+}
+
+.btn-brown {
+  background-color: #6f4e37;
+  color: white;
+}
+
+.btn-olive {
+  background-color: #6b705c;
+  color: white;
+}
+
+.btn-green {
+  background-color: #095b2e;
+  color: white;
+}
+
+.btn-lime {
+  background-color: #7cb518;
+  color: #1a2e00;
+}
+
+.active-label {
+  margin-top: 1.5rem;
+  font-size: 0.9rem;
+  text-align: center;
+}
+
+@media (max-width: 600px) {
+  .btn {
+    min-width: 90px;
+    padding: 0.7rem 1rem;
+    font-size: 0.8rem;
+  }
+}
+
+
+/* Reset Button */
+.reset-btn {
+  position: fixed;
+  bottom: 30px;
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 100;
+
+  border: 2px solid rgba(255, 255, 255, 0.25);
+  background: rgba(45, 45, 68, 0.85);
+  backdrop-filter: blur(8px);
+  color: #fff;
+  cursor: pointer;
+
+  padding: 10px 28px;
+  border-radius: 50px;
+
+  font-family: "Poppins", sans-serif;
+  font-size: 0.9rem;
+  font-weight: 600;
+  letter-spacing: 0.5px;
+  text-transform: uppercase;
+
+  transition: all 0.3s ease;
+}
+
+.reset-btn:hover {
+  background: rgba(255, 255, 255, 0.12);
+  border-color: rgba(255, 255, 255, 0.5);
+  transform: translateX(-50%) scale(1.05);
+}
+
+.reset-btn:active {
+  transform: translateX(-50%) scale(0.95);
+}
+
+.btn.active {
+  outline: none;
+  box-shadow:
+    0 0 0 3px #fff,
+    0 0 0 6px currentColor,
+    0 0 20px currentColor;
+  transform: scale(1.1);
+}
+
+.btn-purple.active {
+  box-shadow: 0 0 0 3px #fff, 0 0 0 6px #6a4c93, 0 0 25px #6a4c93;
+}
+
+.btn-pink.active {
+  box-shadow: 0 0 0 3px #3a003a, 0 0 0 6px #ff70a6, 0 0 25px #ff70a6;
+}
+
+.btn-brown.active {
+  box-shadow: 0 0 0 3px #fff, 0 0 0 6px #6f4e37, 0 0 25px #6f4e37;
+}
+
+.btn-olive.active {
+  box-shadow: 0 0 0 3px #fff, 0 0 0 6px #6b705c, 0 0 25px #6b705c;
+}
+
+.btn-green.active {
+  box-shadow: 0 0 0 3px #fff, 0 0 0 6px #095b2e, 0 0 25px #095b2e;
+}
+
+.btn-lime.active {
+  box-shadow: 0 0 0 3px #1a2e00, 0 0 0 6px #7cb518, 0 0 25px #7cb518;
+}
